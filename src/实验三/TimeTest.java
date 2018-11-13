@@ -1,5 +1,8 @@
 package 实验三;
 
+import org.junit.Test;
+import 实验二.MergeSort;
+
 public class TimeTest {
     public static void main(String[] args) {
 //        int[] nums = new int[]{5,1,2,4,9,8,7,6,5,4};
@@ -11,7 +14,8 @@ public class TimeTest {
 
     public static void make(int[] nums){
         long startTime = System.currentTimeMillis();
-        int result = MedianSort.select(nums,0);
+        MergeSort.merge_sort_up2down(nums,0,nums.length-1);
+        int result = nums[0];
         long endtime = System.currentTimeMillis();
 
         long runTime = endtime - startTime;
@@ -22,7 +26,6 @@ public class TimeTest {
 //        }
 
     }
-
 
 
     public static int[] getRandomNums(int size){
