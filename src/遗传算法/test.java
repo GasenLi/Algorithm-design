@@ -3,7 +3,7 @@ package 遗传算法;
 public class test {
 
     public static void main(String[] args) {
-        System.out.println(fun(2.376));
+        System.out.println(fun(1.344));
     }
 
     public static double fun(double temp){

@@ -28,15 +28,15 @@ public class DynamicPlan_LCSQ {
             }
         }
 
-        for(int i=0;i<len1;i++){
-            System.out.println(Arrays.toString(vals[i]));
-        }
+//        for(int i=0;i<len1+1;i++){
+//            System.out.println(Arrays.toString(vals[i]));
+//        }
 
         return vals[len1][len2];
     }
     public static void main(String[] args) {
-        String str1 = "ABCBDAB";
-        String str2 = "BDCABA";
+        String str1 = "SAABCD";
+        String str2 = "SBDFFF";
         System.out.println(getLCS(str1,str2));
     }
 }

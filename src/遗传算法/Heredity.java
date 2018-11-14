@@ -163,7 +163,7 @@ public class Heredity {
             //temp = k * (3.0 / (Math.pow(2.0, (double) genelenth) - 1)) - 1.0;
 
 
-            chom1[i].fitness = Math.abs(Math.sin(temp)*Math.sin(temp) + 2*Math.sin(temp)*Math.cos(temp) - 3*Math.cos(temp)*Math.cos(temp) - 2.0);
+            chom1[i].fitness = 1 - Math.abs(Math.sin(temp)*Math.sin(temp) + 2*Math.sin(temp)*Math.cos(temp) - 3*Math.cos(temp)*Math.cos(temp) - 2.0);
             k = 0;
         }
     }
@@ -175,13 +175,13 @@ public class Heredity {
             sum += chom[i].fitness;
         sumfitness = sum;//获取总适应度
         for (int j = 0; j < popsize; j++)
-            chom[j].selectp = (double) (chom[j].fitness / sum);
+            chom[j].selectp = (chom[j].fitness / sum);
     }
 
     public static void main(String[] args)//主函数
     {
         int dai = 0;
-        Heredity test = new Heredity(12, 100, 500, 0.25, 0.03);
+        Heredity test = new Heredity(12, 200, 500, 0.25, 0.1);
         while (test.maxgens > 0) {
             test.calall();
             test.generation();
@@ -204,6 +204,7 @@ public class Heredity {
 
     }
 
+    //2进制数转换为10进制
     public static double get10(int genelenth, chromosome chom1[], int index){
         double k = 0.0;
         double temp =0.0;
