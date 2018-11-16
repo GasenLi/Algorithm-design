@@ -71,7 +71,7 @@ public class Heredity {
     {
         int jcross = 0;
         if (Math.random() <= pxover) {
-            jcross = (int) ((Math.random() * (genelenth - 2)) + 1);//产生[1,21)交叉点
+            jcross = (int) ((Math.random() * (genelenth - 2)) + 1);//产生[1,11)交叉点
 
             for (int i = 1; i <= genelenth; i++) {
                 if (jcross >= i) {
@@ -163,7 +163,7 @@ public class Heredity {
             //temp = k * (3.0 / (Math.pow(2.0, (double) genelenth) - 1)) - 1.0;
 
 
-            chom1[i].fitness = 1 - Math.abs(Math.sin(temp)*Math.sin(temp) + 2*Math.sin(temp)*Math.cos(temp) - 3*Math.cos(temp)*Math.cos(temp) - 2.0);
+            chom1[i].fitness = 7 - Math.abs(Math.sin(temp)*Math.sin(temp) + 2*Math.sin(temp)*Math.cos(temp) - 3*Math.cos(temp)*Math.cos(temp) - 1.0);
             k = 0;
         }
     }
@@ -181,7 +181,7 @@ public class Heredity {
     public static void main(String[] args)//主函数
     {
         int dai = 0;
-        Heredity test = new Heredity(12, 200, 500, 0.25, 0.1);
+        Heredity test = new Heredity(13, 200, 500, 0.25, 0.1);
         while (test.maxgens > 0) {
             test.calall();
             test.generation();
