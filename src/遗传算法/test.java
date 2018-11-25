@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class test {
 
     public static void main(String[] args) {
-        System.out.println(new BigDecimal(fun(7.390)+""));
+        System.out.println(new BigDecimal(fun(1.571)+""));
     }
 
     public static double fun(double temp){

@@ -181,7 +181,7 @@ public class Heredity {
     public static void main(String[] args)//主函数
     {
         int dai = 0;
-        Heredity test = new Heredity(13, 200, 500, 0.25, 0.1);
+        Heredity test = new Heredity(12, 200, 500, 0.25, 0.1);
         while (test.maxgens > 0) {
             test.calall();
             test.generation();
