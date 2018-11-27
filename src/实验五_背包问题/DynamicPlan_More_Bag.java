@@ -1,6 +1,6 @@
 package 实验五_背包问题;
 
-public class DynamicPlan_Memo_Bag {
+public class DynamicPlan_More_Bag {
 
     private static int n = 5;//总的背包数目
     private static int w = 11;//总重量
@@ -9,7 +9,7 @@ public class DynamicPlan_Memo_Bag {
     private static  int memory[][]=new int[n+1][w+1];//备忘录
     private static  String answer = new String();//答案字符串
 
-    public DynamicPlan_Memo_Bag(){
+    public DynamicPlan_More_Bag(){
         //初始化备忘录 为 0
         for(int i=0;i<n+1;i++){
             for(int j=0;j<w+1;j++){
@@ -40,7 +40,7 @@ public class DynamicPlan_Memo_Bag {
     public static void showMemory(){
         for(int i=0;i<n+1;i++){
             for(int j=0;j<w+1;j++){
-                System.out.print(memory[i][j]);
+                System.out.print(memory[i][j] + " ");
             }
             System.out.println();
         }

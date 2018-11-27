@@ -5,6 +5,7 @@ public class Bag {
     private int weight;
     private int[] w;
     private int[] v;
+    private int[] x;
 
     public int getNumber() {
         return number;
