@@ -1,6 +1,5 @@
 package 实验三;
 
-import org.junit.Test;
 import 实验二.MergeSort;
 
 public class TimeTest {

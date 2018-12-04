@@ -10,7 +10,7 @@ public class Recursion_Bag {
     int bestValue = 0;   //获得的最大价值
 
     //回溯搜索
-    void BackTrack(int depth,int preWeights,int preValues){
+    public void BackTrack(int depth,int preWeights,int preValues){
         int currentWeight = preWeights;
         int currentValue = preValues;
 
